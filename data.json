@@ -417,6 +417,14 @@
         ],
         "contatos": [
           {
+            "nome": "Zeca",
+            "telefone": "(31) 98631-1047"
+          },
+          {
+            "nome": "Juliano",
+            "telefone": "(31) 99252-5999"
+          },
+          {
             "nome": "Carlos",
             "telefone": "(31) 99533-0608"
           },
@@ -427,14 +435,6 @@
           {
             "nome": "Kelvin Soares",
             "telefone": "(31) 98231-0795"
-          },
-          {
-            "nome": "Zeca",
-            "telefone": "(31) 98631-1047"
-          },
-          {
-            "nome": "Juliano",
-            "telefone": "(31) 99252-5999"
           },
           {
             "nome": "Fabiano",
@@ -2252,12 +2252,12 @@
       {
         "icone": "lencol",
         "titulo": "Roupas de cama",
-        "texto": "Lençóis, fronhas e edredom."
+        "texto": "Lençóis, fronhas e edredom inclusos na hospedagem."
       },
       {
         "icone": "toalha",
         "titulo": "Roupas de banho",
-        "texto": "2 toalhas de banho e 1 toalha de rosto."
+        "texto": "Toalhas de banho e de rosto inclusas na hospedagem."
       },
       {
         "icone": "cafe",
@@ -2390,7 +2390,7 @@
         "texto": "Um dia na Pousada Monjolos, com almoço e acesso exclusivo à Cachoeira de Baixo.",
         "botao": "Ver detalhes",
         "detalhes": {
-          "destaque": "R$ 75,00 por pessoa/dia · das 10h às 16h",
+          "destaque": "Das 10h às 16h",
           "textos": [
             "Para quem se hospeda em uma das pousadas da rede EcoVip na Serra do Cipó, oferecemos uma experiência exclusiva na Pousada Monjolos."
           ],
@@ -2401,14 +2401,6 @@
                 "Almoço (das 12h às 14h)",
                 "Acesso ao bar e ao salão de jogos",
                 "Acesso exclusivo à deslumbrante Cachoeira de Baixo"
-              ]
-            },
-            {
-              "titulo": "Crianças",
-              "itens": [
-                "Até 4 anos: cortesia",
-                "De 5 a 9 anos: R$ 35,00 por pessoa/dia",
-                "A partir de 10 anos: valor de adulto"
               ]
             }
           ],
@@ -2474,9 +2466,9 @@
         "detalhes": {
           "destaque": "5% de desconto para hóspedes EcoVip",
           "textos": [
-            "Preparamos um book exclusivo com os melhores passeios e experiências da região, reunindo descrições, valores e fotos para te ajudar a escolher com facilidade.",
-            "Ao informar ao atendente que é hóspede da Rede EcoVip, você garante 5% de desconto nos passeios.",
-            "Depois de escolher o passeio ideal, peça o contato do guia na recepção. Ele vai tirar suas dúvidas e organizar a experiência com todo o cuidado."
+            "Passeios com o Receptivo Turístico Guia Serra do Cipó: rapel, canoagem, cavalgada, barco e mais.",
+            "Hóspedes da Rede EcoVip têm 5% de desconto nos passeios.",
+            "Para reservar, toque no botão abaixo e fale com a gente pelo WhatsApp."
           ],
           "fotos": [
             {
@@ -2498,9 +2490,8 @@
           ],
           "botoes": [
             {
-              "texto": "Ver catálogo de passeios",
-              "url": "https://drive.google.com/file/d/1_Y5IDQ1k-eXInYvnnLfduDwYiWUxLirM/view?usp=drivesdk",
-              "icone": "mapa"
+              "texto": "Faça sua reserva",
+              "whatsapp": "Olá! Quero reservar um passeio com o guia (desconto de 5% para hóspedes EcoVip)."
             }
           ]
         }
@@ -2520,8 +2511,8 @@
             {
               "titulo": "Valores",
               "itens": [
-                "Massagem para 1 pessoa: R$ 190,00",
-                "Massagem para 2 pessoas: R$ 380,00"
+                "Para 1 pessoa: a partir de R$ 190,00",
+                "Para 2 pessoas: a partir de R$ 380,00"
               ]
             },
             {

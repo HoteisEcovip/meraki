@@ -376,7 +376,7 @@
   function botoesDetalhe(botoes) {
     const html = lista(botoes).map((bt) => {
       const href = bt.whatsapp ? whatsUrl(bt.whatsapp) : bt.url;
-      return linkExterno(href, `${ico(bt.icone || (bt.whatsapp ? 'whatsapp' : 'site'))} ${esc(bt.texto)}`, 'botao botao--primario botao--largo');
+      return linkExterno(href, `${ico(bt.icone || (bt.whatsapp ? 'whatsapp' : 'site'))} ${esc(bt.texto)}`, bt.whatsapp ? 'botao botao--whats botao--largo' : 'botao botao--primario botao--largo');
     }).join('');
     return html ? `<div class="acoes acoes--coluna">${html}</div>` : '';
   }
