@@ -185,16 +185,16 @@
         ],
         "fotos": [
           {
+            "src": "img/quartos/triplo-musb82dtwl5.webp",
+            "alt": "Luxo Triplo — foto 3"
+          },
+          {
             "src": "img/quartos/triplo-musb8216ny3.webp",
             "alt": "Luxo Triplo — foto 1"
           },
           {
             "src": "img/quartos/triplo-musb82820q8.webp",
             "alt": "Luxo Triplo — foto 2"
-          },
-          {
-            "src": "img/quartos/triplo-musb82dtwl5.webp",
-            "alt": "Luxo Triplo — foto 3"
           },
           {
             "src": "img/quartos/triplo-musb82jrrsh.webp",
@@ -246,12 +246,12 @@
         ],
         "fotos": [
           {
-            "src": "img/quartos/quadruplo-musb8w11ojx.webp",
-            "alt": "Luxo Quádruplo — foto 1"
-          },
-          {
             "src": "img/quartos/quadruplo-musb8w74w38.webp",
             "alt": "Luxo Quádruplo — foto 2"
+          },
+          {
+            "src": "img/quartos/quadruplo-musb8w11ojx.webp",
+            "alt": "Luxo Quádruplo — foto 1"
           },
           {
             "src": "img/quartos/quadruplo-musb8wcup69.webp",
@@ -280,6 +280,88 @@
           {
             "src": "img/quartos/quadruplo-musb8x969kx.webp",
             "alt": "Luxo Quádruplo — foto 9"
+          }
+        ]
+      },
+      {
+        "id": "quarto-musc1ab0",
+        "nome": "Master",
+        "chamada": "",
+        "capacidade": 2,
+        "camas": "Cama de casal",
+        "caracteristicas": [
+          "Hidromassagem"
+        ],
+        "disponivel": [
+          {
+            "icone": "wifi",
+            "texto": "Wi-Fi de cortesia"
+          },
+          {
+            "icone": "ar",
+            "texto": "Ar-condicionado"
+          },
+          {
+            "icone": "frigobar",
+            "texto": "Frigobar"
+          },
+          {
+            "icone": "chuveiro",
+            "texto": "Chuveiro quente"
+          },
+          {
+            "icone": "cafe",
+            "texto": "Café da manhã incluso"
+          }
+        ],
+        "informacoes": [
+          "Check-in a partir das 14h e check-out até 12h.",
+          "Não comporta cama extra."
+        ],
+        "fotos": [
+          {
+            "src": "img/quartos/quarto-musc1ab0-musc27tjy9k.webp",
+            "alt": "Master — foto 9"
+          },
+          {
+            "src": "img/quartos/quarto-musc1ab0-musc25f91g0.webp",
+            "alt": "Master — foto 1"
+          },
+          {
+            "src": "img/quartos/quarto-musc1ab0-musc25z1908.webp",
+            "alt": "Master — foto 2"
+          },
+          {
+            "src": "img/quartos/quarto-musc1ab0-musc26f9p57.webp",
+            "alt": "Master — foto 3"
+          },
+          {
+            "src": "img/quartos/quarto-musc1ab0-musc26xk1vc.webp",
+            "alt": "Master — foto 4"
+          },
+          {
+            "src": "img/quartos/quarto-musc1ab0-musc2769ml5.webp",
+            "alt": "Master — foto 5"
+          },
+          {
+            "src": "img/quartos/quarto-musc1ab0-musc27ekp3r.webp",
+            "alt": "Master — foto 6"
+          },
+          {
+            "src": "img/quartos/quarto-musc1ab0-musc27j7cgf.webp",
+            "alt": "Master — foto 7"
+          },
+          {
+            "src": "img/quartos/quarto-musc1ab0-musc27o3plx.webp",
+            "alt": "Master — foto 8"
+          },
+          {
+            "src": "img/quartos/quarto-musc1ab0-musc280p9z2.webp",
+            "alt": "Master — foto 10"
+          },
+          {
+            "src": "img/quartos/quarto-musc1ab0-musc2893lp6.webp",
+            "alt": "Master — foto 11"
           }
         ]
       }
