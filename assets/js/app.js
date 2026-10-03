@@ -217,7 +217,7 @@
           <div class="mapa mapa--prox" id="mapa-prox" role="region" aria-label="Mapa da região"><span class="mapa__carregando">Carregando mapa…</span></div>
           <div class="mapa-resumo" id="mapa-resumo" hidden></div>
         </div>
-        <p class="mapa-dica">${ico('info')} Toque em um lugar acima para ver o caminho. Para mexer no mapa, use dois dedos ou os botões + e −.</p>
+        <p class="mapa-dica">${ico('info')} Toque em um lugar acima para ver o caminho no mapa. Para aproximar o mapa, use os botões + e −.</p>
         <div id="prox-detalhe" class="prox-detalhe" aria-live="polite"></div>
         ${s.aviso ? `<p class="nota">${ico('info')} ${esc(s.aviso)}</p>` : ''}
       </div>`;
@@ -590,9 +590,9 @@
     el.innerHTML = '';
     const t = cfgTiles();
     // posição inicial já definida (o mapa vetorial exige; depois cada mapa enquadra o que precisa)
-    // no celular o mapa não "prende" o dedo: arrastar com um dedo rola a página; para mexer no mapa, use dois dedos ou o + e −
+    // no celular o mapa fica parado: passar o dedo por cima sempre rola a página; para aproximar, só os botões + e −
     const toque = matchMedia('(pointer: coarse)').matches;
-    const mapa = L.map(el, { scrollWheelZoom: false, tap: false, zoomSnap: 0.5, dragging: !toque })
+    const mapa = L.map(el, { scrollWheelZoom: false, tap: false, zoomSnap: 0.5, dragging: !toque, touchZoom: !toque, doubleClickZoom: !toque, boxZoom: false, keyboard: false })
       .setView(D.pousada.coordenadas, 13);
     const simples = () => L.tileLayer(t.url, { maxZoom: 18, attribution: t.atribuicao }).addTo(mapa);
     if (!mapaVetorial) { simples(); return mapa; }

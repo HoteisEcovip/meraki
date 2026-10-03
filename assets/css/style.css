@@ -272,7 +272,9 @@ p { margin: 0 0 1em; }
 .prox-card__texto small { color: var(--cor-suave); font-size: .92rem; display: flex; align-items: center; gap: .3em; flex-wrap: wrap; }
 
 .mapa-caixa { position: relative; isolation: isolate; }
-.mapa--prox { height: 300px; }
+.mapa--prox { height: 240px; }
+/* no celular o mapa nunca segura o dedo: o toque passa para a página rolar */
+@media (pointer: coarse) { .mapa--prox, .mapa--prox .leaflet-container, .mapa--prox .leaflet-pane, .mapa--prox canvas { touch-action: pan-y !important; } }
 .mapa-resumo {
   position: absolute; left: 10px; right: 10px; bottom: 10px; z-index: 500;
   background: rgba(255, 253, 248, .97); border-radius: var(--raio); box-shadow: var(--sombra); padding: 12px 14px;
@@ -555,6 +557,6 @@ html { font-size: 106.25%; }
 
 @media (min-width: 640px) { .comodidades { grid-template-columns: 1fr 1fr; } }
 @media (min-width: 900px) {
-  .mapa--prox { height: 420px; }
+  .mapa--prox { height: 360px; }
   .infos { grid-template-columns: repeat(2, 1fr); align-items: start; }
 }
