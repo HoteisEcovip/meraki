@@ -33,7 +33,9 @@
   "ecovip": {
     "nome": "EcoVip",
     "logo": "img/logo-ecovip.png",
-    "url": "https://hoteisecovip.com.br/"
+    "url": "https://hoteisecovip.com.br/",
+    "site": "https://hoteisecovip.com.br/",
+    "instagram": "https://instagram.com/ecovipcipo"
   },
   "hero": {
     "imagem": "img/capa-musb2setr7d.webp",
@@ -425,6 +427,10 @@
             "telefone": "(31) 99252-5999"
           },
           {
+            "nome": "Wesley",
+            "telefone": "(31) 99776-9238"
+          },
+          {
             "nome": "Carlos",
             "telefone": "(31) 99533-0608"
           },
@@ -439,10 +445,6 @@
           {
             "nome": "Fabiano",
             "telefone": "(31) 98554-8530"
-          },
-          {
-            "nome": "Wesley",
-            "telefone": "(31) 99776-9238"
           },
           {
             "nome": "Joyce",

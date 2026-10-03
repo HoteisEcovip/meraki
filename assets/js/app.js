@@ -331,7 +331,10 @@
       [p.site, 'site', 'Nosso site'],
       [p.instagram, 'instagram', 'Instagram'],
       [whatsUrl(), 'whatsapp', 'WhatsApp'],
-      [mapsLocalUrl(), 'mapa', 'Google Maps']
+      [mapsLocalUrl(), 'mapa', 'Google Maps'],
+      // botões da rede EcoVip, em todas as pousadas
+      [e.site, 'site', 'Site EcoVip'],
+      [e.instagram, 'instagram', 'Instagram EcoVip']
     ].filter(([u]) => u);
     return `<div class="container rodape__caixa">
       <div class="rodape__marca">

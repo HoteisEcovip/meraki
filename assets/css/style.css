@@ -481,7 +481,7 @@ dialog::backdrop { background: rgba(20, 18, 14, .6); }
   .icones-grade, .regras { grid-template-columns: 1fr 1fr; }
   .externa { grid-auto-columns: 46%; }
   .galeria { columns: 3; }
-  .rodape__links { grid-template-columns: repeat(4, auto); justify-content: start; }
+  .rodape__links { grid-template-columns: repeat(3, auto); justify-content: start; }
 }
 
 @media (min-width: 900px) {
