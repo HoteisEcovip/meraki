@@ -294,6 +294,38 @@
     "titulo": "Tudo o que vocês podem precisar por aqui.",
     "itens": [
       {
+        "id": "onibus",
+        "icone": "onibus",
+        "titulo": "Como chegar de ônibus",
+        "texto": "De BH pela Viação Serro ou Saritur",
+        "textos": [
+          "Vocês podem embarcar na Viação Serro ou na Viação Saritur, na Rodoviária de BH. Ao comprar a passagem, digam que estão indo para a Serra do Cipó."
+        ],
+        "passos": [
+          "Ao agente de bordo, digam que vão desembarcar em frente ao Restaurante Paiol — fica depois do sinal, em frente ao Pátio Cipó e antes do Chapa Halls.",
+          "Ao desembarcar, entrem na rua de terra em frente ao ponto de desembarque. Essa é a rua da Pousada Meraki.",
+          "Sigam até o final da rua: a estradinha termina na pousada.",
+          "Do ponto de parada até a pousada são cerca de 500 metros."
+        ],
+        "blocos": [
+          {
+            "titulo": "Dicas de sinal e mapa",
+            "itens": [
+              "Abram a localização da pousada no Google Maps e ampliem o mapa bem na área da pousada, para ele atualizar os mapas da região.",
+              "Ativem o modo offline do Google Maps, caso fiquem sem rede de dados.",
+              "Na região, as redes que funcionam bem são VIVO e CLARO. OI e TIM funcionam em pouquíssimos lugares."
+            ]
+          }
+        ],
+        "botoes": [
+          {
+            "texto": "Abrir localização no Google Maps",
+            "url": "https://goo.gl/maps/sN9bGkoUUU5Gevtd6",
+            "icone": "mapa"
+          }
+        ]
+      },
+      {
         "id": "taxi",
         "icone": "carro",
         "titulo": "Taxistas",
