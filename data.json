@@ -2476,7 +2476,7 @@
           "textos": [
             "Preparamos um book exclusivo com os melhores passeios e experiências da região, reunindo descrições, valores e fotos para te ajudar a escolher com facilidade.",
             "Ao informar ao atendente que é hóspede da Rede EcoVip, você garante 5% de desconto nos passeios.",
-            "Depois de escolher o passeio ideal, é só falar diretamente com o guia pelo número (31) 9515-4420. Ele vai tirar suas dúvidas e organizar sua experiência com todo o cuidado."
+            "Depois de escolher o passeio ideal, peça o contato do guia na recepção. Ele vai tirar suas dúvidas e organizar a experiência com todo o cuidado."
           ],
           "fotos": [
             {
@@ -2501,11 +2501,6 @@
               "texto": "Ver catálogo de passeios",
               "url": "https://drive.google.com/file/d/1_Y5IDQ1k-eXInYvnnLfduDwYiWUxLirM/view?usp=drivesdk",
               "icone": "mapa"
-            },
-            {
-              "texto": "Ligar para o guia: (31) 9515-4420",
-              "url": "tel:+553195154420",
-              "icone": "telefone"
             }
           ]
         }
