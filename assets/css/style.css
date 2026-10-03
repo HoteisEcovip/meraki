@@ -12,7 +12,7 @@
   --cor-fundo: #f6f1e7;      /* linho */
   --cor-areia: #ece3d3;
   --cor-texto: #2a251f;
-  --cor-suave: #6b6156;
+  --cor-suave: #574e45;   /* mais escuro: melhor leitura */
   --cor-linha: #dccfb9;
   --cor-cartao: #fffdf8;
   --cor-whats: #1f8f4e;
@@ -66,7 +66,7 @@ p { margin: 0 0 1em; }
 
 .botao {
   display: inline-flex; align-items: center; justify-content: center; gap: .5em;
-  min-height: 48px; padding: .75em 1.35em;
+  min-height: 52px; padding: .8em 1.4em;
   border-radius: 999px; border: 1.5px solid transparent;
   font-weight: 600; font-size: .95rem; line-height: 1.2; text-decoration: none; text-align: center;
   cursor: pointer; transition: transform .15s ease, background-color .2s ease, color .2s ease, border-color .2s;
@@ -150,14 +150,14 @@ p { margin: 0 0 1em; }
 .secao__intro { color: var(--cor-suave); max-width: 60ch; }
 .eyebrow {
   display: flex; align-items: center; gap: .5em; margin: 0 0 .75rem;
-  font-size: .75rem; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--cor-destaque);
+  font-size: .82rem; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--cor-destaque);
 }
 .secao--mata .eyebrow { color: #e5c9a8; }
 .secao__cab--centro .eyebrow { justify-content: center; }
 
 .cartao { background: var(--cor-cartao); border-radius: var(--raio); box-shadow: var(--sombra); }
 
-.nota { display: flex; gap: .6em; align-items: flex-start; margin-top: 1.5rem; font-size: .88rem; color: var(--cor-suave); }
+.nota { display: flex; gap: .6em; align-items: flex-start; margin-top: 1.5rem; font-size: .98rem; color: var(--cor-suave); }
 .nota .ico { margin-top: .2em; }
 
 /* revelar ao rolar */
@@ -269,10 +269,10 @@ p { margin: 0 0 1em; }
 .prox-card__foto img { width: 100%; height: 100%; object-fit: cover; }
 .prox-card__texto { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
 .prox-card__texto strong { font-weight: 600; font-size: .95rem; line-height: 1.25; }
-.prox-card__texto small { color: var(--cor-suave); font-size: .8rem; display: flex; align-items: center; gap: .3em; flex-wrap: wrap; }
+.prox-card__texto small { color: var(--cor-suave); font-size: .92rem; display: flex; align-items: center; gap: .3em; flex-wrap: wrap; }
 
 .mapa-caixa { position: relative; isolation: isolate; }
-.mapa--prox { height: 62vh; min-height: 340px; max-height: 560px; }
+.mapa--prox { height: 300px; }
 .mapa-resumo {
   position: absolute; left: 10px; right: 10px; bottom: 10px; z-index: 500;
   background: rgba(255, 253, 248, .97); border-radius: var(--raio); box-shadow: var(--sombra); padding: 12px 14px;
@@ -297,7 +297,7 @@ p { margin: 0 0 1em; }
 .local__fatos { list-style: none; padding: 0; margin: 0; display: grid; gap: 6px; font-weight: 500; }
 .local__fatos li { display: flex; align-items: center; gap: .55em; }
 .local__fatos .ico { color: var(--cor-destaque); }
-.local__fonte { font-size: .78rem; margin: 1rem 0 0; font-style: italic; }
+.local__fonte { font-size: .88rem; margin: 1rem 0 0; font-style: italic; }
 
 /* faixa de fotos com rolagem lateral */
 .faixa {
@@ -486,7 +486,7 @@ dialog::backdrop { background: rgba(20, 18, 14, .6); }
   :root { --gutter: 32px; --topo-h: 84px; }
   .secao { padding: 112px 0; }
   .sobre { grid-template-columns: 5fr 6fr; align-items: center; gap: 4rem; }
-  .quartos { grid-template-columns: repeat(3, 1fr); }
+  .quartos { grid-template-columns: repeat(2, 1fr); align-items: start; }
   .externa {
     grid-auto-flow: row; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 240px; overflow: visible;
     max-width: 1160px; margin-inline: auto;
@@ -494,12 +494,10 @@ dialog::backdrop { background: rgba(20, 18, 14, .6); }
   .externa .foto { aspect-ratio: auto; height: 100%; }
   .externa .foto:nth-child(1) { grid-column: span 2; grid-row: span 2; }
   .externa .foto:nth-child(5) { grid-column: span 2; }
-  .local-pousada__grade { grid-template-columns: 3fr 2fr; align-items: stretch; }
-  .local-pousada__grade .mapa { height: auto; min-height: 420px; }
   .icones-grade { grid-template-columns: repeat(3, 1fr); }
   .infos { grid-template-columns: repeat(3, 1fr); }
   .regras { grid-template-columns: repeat(3, 1fr); }
-  .beneficios { grid-template-columns: repeat(3, 1fr); }
+  .beneficios { grid-template-columns: repeat(2, 1fr); align-items: start; }
   .experiencia { grid-template-columns: 3fr 2fr; align-items: center; gap: 40px; }
   .experiencia:nth-child(even) .experiencia__fotos { order: 2; }
   .galeria { columns: 4; column-gap: 12px; }
@@ -520,3 +518,43 @@ dialog::backdrop { background: rgba(20, 18, 14, .6); }
   .lightbox__nav--prox { right: 24px; }
 }
 .modal__texto--topo h2 { margin-bottom: .9rem; }
+
+/* ==========================================================
+   Leitura fácil (pensado para leigos e idosos):
+   letras maiores, tudo aberto na página, botões grandes
+   ========================================================== */
+html { font-size: 106.25%; }
+.faixa__dica { display: flex; align-items: center; gap: .5em; margin: 8px 16px 0; font-size: .92rem; color: var(--cor-suave); }
+.quarto__chamada { color: var(--cor-suave); font-size: 1.05rem; margin: .3rem 0 1rem; }
+.quarto .fatos--grande li { background: var(--cor-fundo); }
+.detalhe__titulo { font-family: var(--fonte-texto); font-size: 1rem; font-weight: 700; color: var(--cor-titulo); margin: 1.3rem 0 .6rem; letter-spacing: 0; text-transform: none; }
+.marcadores, .comodidades { font-size: 1rem; }
+.comodidades { grid-template-columns: 1fr; }
+.local-pousada__info { max-width: 640px; }
+.local-pousada__botao { margin-top: 1.5rem; }
+.acoes--coluna { flex-direction: column; }
+.acoes--coluna .botao { flex: none; width: 100%; }
+.mapa-dica { display: flex; gap: .5em; align-items: flex-start; margin: 8px 0 0; font-size: .92rem; color: var(--cor-suave); }
+.mapa-dica .ico { margin-top: .2em; }
+
+.beneficio-card { display: flex; flex-direction: column; width: 100%; background: var(--cor-cartao); color: var(--cor-texto); border-radius: var(--raio); overflow: hidden; box-shadow: var(--sombra); }
+.beneficio-card__corpo { padding: 20px; }
+.beneficios .beneficio-card h3 { color: var(--cor-titulo); margin-bottom: .4rem; }
+.beneficios .beneficio-card .beneficios__num { color: var(--cor-destaque); }
+.beneficios .beneficio-card p { opacity: 1; margin: 0 0 .8em; font-size: 1rem; color: var(--cor-texto); }
+.beneficios .beneficio-card .beneficio-card__resumo { font-size: 1.05rem; color: var(--cor-suave); }
+.beneficios .beneficio-card .nota { color: var(--cor-suave); }
+
+.infos { display: grid; gap: 14px; }
+.info-bloco { padding: 20px; }
+.info-bloco__titulo { display: flex; align-items: center; gap: 12px; font-size: 1.35rem; margin-bottom: 1rem; }
+.info-bloco > p { font-size: 1rem; }
+.contato strong { font-size: 1.05rem; }
+.contato__nome small { font-size: .95rem; }
+.contato__ligar { flex: none; min-height: 46px; }
+
+@media (min-width: 640px) { .comodidades { grid-template-columns: 1fr 1fr; } }
+@media (min-width: 900px) {
+  .mapa--prox { height: 420px; }
+  .infos { grid-template-columns: repeat(2, 1fr); align-items: start; }
+}

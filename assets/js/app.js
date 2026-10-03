@@ -155,23 +155,20 @@
         ${cabecalho(s)}
         <div class="quartos">
           ${lista(s.itens).map((q) => {
+            // tudo do quarto aparece direto no card (sem precisar clicar)
             const g = registrarGaleria(`quarto-${q.id}`, q.fotos);
-            const n = galerias.get(g).length;
             return `<article class="quarto revelar">
-              <button type="button" class="quarto__foto foto" data-quarto="${esc(q.id)}" aria-label="Conheça o ${esc(q.nome)}">
-                ${img(galerias.get(g)[0])}
-                ${n > 1 ? `<span class="selo">${ico('camera')} ${n} fotos</span>` : ''}
-              </button>
+              ${fotosDoCard(g)}
               <div class="quarto__corpo">
                 <h3>${esc(q.nome)}</h3>
-                <p>${esc(q.chamada)}</p>
-                <ul class="fatos">
-                  ${q.capacidade ? `<li>${ico('pessoas')} Até ${esc(q.capacidade)} pessoas</li>` : ''}
-                  ${q.camas ? `<li>${ico('cama')} ${esc(q.camas)}</li>` : ''}
+                ${q.chamada ? `<p class="quarto__chamada">${esc(q.chamada)}</p>` : ''}
+                <ul class="fatos fatos--grande">
+                  ${q.capacidade ? `<li>${ico('pessoas')} <span><small>Capacidade</small>Até ${esc(q.capacidade)} pessoas</span></li>` : ''}
+                  ${q.camas ? `<li>${ico('cama')} <span><small>Camas</small>${esc(q.camas)}</span></li>` : ''}
                 </ul>
-                <div class="quarto__acoes">
-                  <button type="button" class="botao botao--primario" data-quarto="${esc(q.id)}">Clique aqui</button>
-                </div>
+                ${lista(q.caracteristicas).length ? `<h4 class="detalhe__titulo">Características</h4><ul class="marcadores">${q.caracteristicas.map((c) => `<li>${ico('check')} ${esc(c)}</li>`).join('')}</ul>` : ''}
+                ${lista(q.disponivel).length ? `<h4 class="detalhe__titulo">O que tem no quarto</h4><ul class="comodidades">${q.disponivel.map((c) => `<li>${ico(c.icone || 'check')} ${esc(c.texto)}</li>`).join('')}</ul>` : ''}
+                ${lista(q.informacoes).length ? `<h4 class="detalhe__titulo">Informações importantes</h4><ul class="marcadores marcadores--info">${q.informacoes.map((c) => `<li>${ico('info')} ${esc(c)}</li>`).join('')}</ul>` : ''}
               </div>
             </article>`;
           }).join('')}
@@ -193,22 +190,17 @@
     localizacao(s) {
       const p = D.pousada;
       const item = (rotulo, texto) => (texto ? `<div><dt>${rotulo}</dt><dd>${esc(texto)}</dd></div>` : '');
+      // sem mapa aqui: só o endereço e um botão grande que abre o Google Maps
       return `<div class="container local-pousada">
         ${cabecalho(s)}
-        <div class="local-pousada__grade">
-          <div class="mapa" id="mapa-pousada" role="region" aria-label="Mapa com a localização da pousada"><span class="mapa__carregando">Carregando mapa…</span></div>
-          <div class="cartao local-pousada__info revelar">
-            <p class="local-pousada__nome">${ico('pin')} ${esc(p.nome)}${p.regiao ? ` — ${esc(p.regiao)}` : ''}</p>
-            <dl class="definicoes">
-              ${item('Endereço', p.endereco)}
-              ${item('Como chegar', s.comoChegar)}
-              ${item('Ponto de referência', s.referencia)}
-            </dl>
-            <div class="acoes">
-              ${linkExterno(mapsRotaUrl(p.coordenadas), `${ico('rota')} Abrir rota no Google Maps`, 'botao botao--primario')}
-              ${linkExterno(mapsLocalUrl(), `${ico('mapa')} Ver no Google Maps`, 'botao botao--contorno')}
-            </div>
-          </div>
+        <div class="cartao local-pousada__info revelar">
+          <p class="local-pousada__nome">${ico('pin')} ${esc(p.nome)}${p.regiao ? ` — ${esc(p.regiao)}` : ''}</p>
+          <dl class="definicoes">
+            ${item('Endereço', p.endereco)}
+            ${item('Como chegar', s.comoChegar)}
+            ${item('Ponto de referência', s.referencia)}
+          </dl>
+          ${linkExterno(mapsLocalUrl(), `${ico('mapa')} Abrir no Google Maps`, 'botao botao--primario botao--grande botao--largo local-pousada__botao')}
         </div>
       </div>`;
     },
@@ -225,6 +217,7 @@
           <div class="mapa mapa--prox" id="mapa-prox" role="region" aria-label="Mapa da região"><span class="mapa__carregando">Carregando mapa…</span></div>
           <div class="mapa-resumo" id="mapa-resumo" hidden></div>
         </div>
+        <p class="mapa-dica">${ico('info')} Toque em um lugar acima para ver o caminho. Para mexer no mapa, use dois dedos ou os botões + e −.</p>
         <div id="prox-detalhe" class="prox-detalhe" aria-live="polite"></div>
         ${s.aviso ? `<p class="nota">${ico('info')} ${esc(s.aviso)}</p>` : ''}
       </div>`;
@@ -259,18 +252,12 @@
     infos(s) {
       return `<div class="container">
         ${cabecalho(s)}
-        <ul class="infos">
-          ${lista(s.itens).map((it) => `<li class="revelar">
-            <button type="button" class="info-card" data-info="${esc(it.id)}">
-              <span class="icone-bola">${ico(it.icone || 'info')}</span>
-              <span class="info-card__texto">
-                <strong>${esc(it.titulo)}</strong>
-                <small>${esc(it.texto || (lista(it.contatos).length ? `${it.contatos.length} contatos` : ''))}</small>
-                <span class="info-card__mais">Clique aqui ${ico('seta-dir')}</span>
-              </span>
-            </button>
-          </li>`).join('')}
-        </ul>
+        <div class="infos">
+          ${lista(s.itens).map((it) => `<article class="info-bloco cartao revelar">
+            <h3 class="info-bloco__titulo"><span class="icone-bola">${ico(it.icone || 'info')}</span> ${esc(it.titulo)}</h3>
+            ${conteudoInfo(it)}
+          </article>`).join('')}
+        </div>
       </div>`;
     },
 
@@ -281,14 +268,24 @@
         ${cabecalho(s)}
         ${s.intro ? `<p class="beneficios__intro">${esc(s.intro)}</p>` : ''}
         <ol class="beneficios">
-          ${lista(s.itens).map((b, i) => `<li class="revelar">
-            <button type="button" class="beneficio" data-beneficio="${esc(b.id)}"${b.detalhes ? '' : ' disabled'}>
-              <span class="beneficios__num">${String(i + 1).padStart(2, '0')}</span>
-              <h3>${esc(b.titulo)}</h3>
-              <p>${esc(b.texto)}</p>
-              ${b.detalhes ? `<span class="beneficio__mais">Clique aqui ${ico('seta-dir')}</span>` : ''}
-            </button>
-          </li>`).join('')}
+          ${lista(s.itens).map((b, i) => {
+            // tudo do benefício aparece direto no card (sem precisar clicar)
+            const d = b.detalhes || {};
+            const g = registrarGaleria(`beneficio-${b.id}`, d.fotos);
+            return `<li class="beneficio-card revelar">
+              ${fotosDoCard(g)}
+              <div class="beneficio-card__corpo">
+                <span class="beneficios__num">${String(i + 1).padStart(2, '0')}</span>
+                <h3>${esc(b.titulo)}</h3>
+                ${b.texto ? `<p class="beneficio-card__resumo">${esc(b.texto)}</p>` : ''}
+                ${d.destaque ? `<p class="modal__destaque">${esc(d.destaque)}</p>` : ''}
+                ${lista(d.textos).map((t) => `<p>${esc(t)}</p>`).join('')}
+                ${lista(d.blocos).map((bl) => `<h4 class="detalhe__titulo">${esc(bl.titulo)}</h4><ul class="marcadores">${lista(bl.itens).map((c) => `<li>${ico('check')} ${esc(c)}</li>`).join('')}</ul>`).join('')}
+                ${d.nota ? `<p class="nota">${ico('info')} ${esc(d.nota)}</p>` : ''}
+                ${botoesDetalhe(d.botoes)}
+              </div>
+            </li>`;
+          }).join('')}
         </ol>
         ${s.fecho ? `<p class="beneficios__fecho">${ico('folha')} ${esc(s.fecho)}</p>` : ''}
         ${s.url ? linkExterno(s.url, esc(s.botao || 'Conheça todos os benefícios'), 'botao botao--claro') : ''}
@@ -365,6 +362,38 @@
   function faixaFotos(g) {
     // a primeira foto da faixa carrega na hora (as demais só quando roladas)
     return `<div class="faixa">${galerias.get(g).map((f, i) => fotoBotao(g, i, f)).join('')}</div>`.replace(' loading="lazy"', '');
+  }
+
+  // Fotos de um card: faixa que se arrasta para o lado, com um aviso escrito de quantas fotos há
+  function fotosDoCard(g) {
+    const n = galerias.get(g).length;
+    if (!n) return '';
+    return `<div class="faixa faixa--card">${galerias.get(g).map((f, i) => fotoBotao(g, i, f)).join('')}</div>
+      ${n > 1 ? `<p class="faixa__dica">${ico('camera')} ${n} fotos — arraste para o lado para ver todas</p>` : ''}`;
+  }
+
+  // Botões de um benefício (catálogo, telefone…) — escritos por extenso, sem ícone sozinho
+  function botoesDetalhe(botoes) {
+    const html = lista(botoes).map((bt) => {
+      const href = bt.whatsapp ? whatsUrl(bt.whatsapp) : bt.url;
+      return linkExterno(href, `${ico(bt.icone || (bt.whatsapp ? 'whatsapp' : 'site'))} ${esc(bt.texto)}`, 'botao botao--primario botao--largo');
+    }).join('');
+    return html ? `<div class="acoes acoes--coluna">${html}</div>` : '';
+  }
+
+  // Informações úteis (ônibus, taxistas, delivery) mostradas direto na página
+  function conteudoInfo(it) {
+    const contatos = lista(it.contatos).map((c) => `<li class="contato">
+        <span class="contato__nome"><strong>${esc(c.nome)}</strong><small>${esc(fmtTel(c.telefone))}</small></span>
+        <a class="botao botao--contorno botao--pequeno contato__ligar" href="tel:+${telInternacional(c.telefone)}">${ico('telefone')} Ligar</a>
+      </li>`).join('');
+    return `
+      ${lista(it.textos).map((t) => `<p>${esc(t)}</p>`).join('')}
+      ${contatos ? `<ul class="contatos">${contatos}</ul>` : ''}
+      ${lista(it.passos).length ? `<h4 class="detalhe__titulo">Passo a passo</h4><ol class="passos">${it.passos.map((p) => `<li>${esc(p)}</li>`).join('')}</ol>` : ''}
+      ${lista(it.blocos).map((bl) => `<h4 class="detalhe__titulo">${esc(bl.titulo)}</h4><ul class="marcadores marcadores--info">${lista(bl.itens).map((c) => `<li>${ico('info')} ${esc(c)}</li>`).join('')}</ul>`).join('')}
+      ${it.nota ? `<p class="nota">${ico('info')} ${esc(it.nota)}</p>` : ''}
+      ${botoesDetalhe(it.botoes)}`;
   }
 
   function modalQuarto(id) {
@@ -561,7 +590,10 @@
     el.innerHTML = '';
     const t = cfgTiles();
     // posição inicial já definida (o mapa vetorial exige; depois cada mapa enquadra o que precisa)
-    const mapa = L.map(el, { scrollWheelZoom: false, tap: false, zoomSnap: 0.5 }).setView(D.pousada.coordenadas, 13);
+    // no celular o mapa não "prende" o dedo: arrastar com um dedo rola a página; para mexer no mapa, use dois dedos ou o + e −
+    const toque = matchMedia('(pointer: coarse)').matches;
+    const mapa = L.map(el, { scrollWheelZoom: false, tap: false, zoomSnap: 0.5, dragging: !toque })
+      .setView(D.pousada.coordenadas, 13);
     const simples = () => L.tileLayer(t.url, { maxZoom: 18, attribution: t.atribuicao }).addTo(mapa);
     if (!mapaVetorial) { simples(); return mapa; }
     const gl = L.maplibreGL({ style: t.estilo, attribution: ATRIBUICAO_VETORIAL }).addTo(mapa);

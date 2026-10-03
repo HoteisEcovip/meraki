@@ -37,9 +37,9 @@
   },
   "hero": {
     "imagem": "img/capa-musb2setr7d.webp",
-    "imagemMobile": "img/capa-mobile-musb2xegc7s.webp",
     "alt": "Pousada Meraki — Serra do Cipó",
-    "frase": "Alguns lugares são feitos para descansar. Outros, para viver momentos que ficam."
+    "frase": "Alguns lugares são feitos para descansar. Outros, para viver momentos que ficam.",
+    "imagemMobile": "img/capa-mobile-musc8w8n8mg.webp"
   },
   "sobre": {
     "eyebrow": "Conheça a Meraki",
