@@ -34,9 +34,10 @@
   const ico = (nome, cls = 'ico') => `<svg class="${cls}" aria-hidden="true"><use href="#i-${esc(nome)}"/></svg>`;
   const lista = (v) => (Array.isArray(v) ? v : []);
 
+  // Nos cards usa a versão leve da foto ("mini", 720 px); a grande só é baixada ao ampliar (lightbox)
   function img(foto, { classe = '', lazy = true, prioridade = false } = {}) {
     if (!foto || !foto.src) return '';
-    return `<img src="${esc(foto.src)}" alt="${esc(foto.alt)}"${classe ? ` class="${classe}"` : ''}` +
+    return `<img src="${esc(foto.mini || foto.src)}" alt="${esc(foto.alt)}"${classe ? ` class="${classe}"` : ''}` +
       `${lazy ? ' loading="lazy"' : ''} decoding="async"${prioridade ? ' fetchpriority="high"' : ''}>`;
   }
 
