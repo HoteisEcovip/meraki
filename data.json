@@ -22,9 +22,12 @@
     "nome": "Pousada Meraki",
     "regiao": "Serra do Cipó",
     "logo": "img/logo-musbeb6viji.png",
-    "coordenadas": [-19.32282, -43.60701],
-    "endereco": "Rua Jequitibá, 225 — Serra do Cipó, Santana do Riacho/MG",
-    "whatsapp": "5531997644425",
+    "coordenadas": [
+      -19.32282,
+      -43.60701
+    ],
+    "endereco": "R. Jequitibá, 152 - Serra do Cipó, Santana do Riacho - MG, 35847-000",
+    "whatsapp": "5531999582502",
     "whatsappMensagem": "Olá! Vi o site da Pousada Meraki e gostaria de mais informações.",
     "instagram": "https://www.instagram.com/pousadameraki/",
     "site": "https://pousadameraki.com.br/",
@@ -35,7 +38,7 @@
     "logo": "img/logo-ecovip.png",
     "url": "https://hoteisecovip.com.br/",
     "site": "https://hoteisecovip.com.br/",
-    "instagram": "https://instagram.com/ecovipcipo"
+    "instagram": "https://www.instagram.com/redeecovip/"
   },
   "hero": {
     "imagem": "img/capa-musb2setr7d.webp",
@@ -55,11 +58,6 @@
         "src": "img/sobre/sobre-musb3fjwqfq.webp",
         "alt": "Conheça a pousada — foto 1",
         "mini": "img/sobre/sobre-musb3fjwqfq.m.webp"
-      },
-      {
-        "src": "img/sobre/sobre-musb3fvmsmu.webp",
-        "alt": "Conheça a pousada — foto 2",
-        "mini": "img/sobre/sobre-musb3fvmsmu.m.webp"
       },
       {
         "src": "img/sobre/sobre-musb3g5xv2k.webp",
@@ -116,6 +114,18 @@
           {
             "icone": "cafe",
             "texto": "Café da manhã incluso"
+          },
+          {
+            "icone": "tv",
+            "texto": "Smart TV"
+          },
+          {
+            "icone": "check",
+            "texto": "Rede"
+          },
+          {
+            "icone": "check",
+            "texto": "Varanda"
           }
         ],
         "informacoes": [
@@ -139,11 +149,6 @@
             "mini": "img/quartos/duplo-musb4io99ic.m.webp"
           },
           {
-            "src": "img/quartos/duplo-musb4iv827o.webp",
-            "alt": "Luxo Duplo — foto 4",
-            "mini": "img/quartos/duplo-musb4iv827o.m.webp"
-          },
-          {
             "src": "img/quartos/duplo-musb4j0xkyh.webp",
             "alt": "Luxo Duplo — foto 5",
             "mini": "img/quartos/duplo-musb4j0xkyh.m.webp"
@@ -152,11 +157,6 @@
             "src": "img/quartos/duplo-musb4j6l870.webp",
             "alt": "Luxo Duplo — foto 6",
             "mini": "img/quartos/duplo-musb4j6l870.m.webp"
-          },
-          {
-            "src": "img/quartos/duplo-musb4jd03r3.webp",
-            "alt": "Luxo Duplo — foto 7",
-            "mini": "img/quartos/duplo-musb4jd03r3.m.webp"
           },
           {
             "src": "img/quartos/duplo-musb4jgi3w3.webp",
@@ -194,6 +194,18 @@
           {
             "icone": "cafe",
             "texto": "Café da manhã incluso"
+          },
+          {
+            "icone": "tv",
+            "texto": "Smart TV"
+          },
+          {
+            "icone": "check",
+            "texto": "Rede"
+          },
+          {
+            "icone": "check",
+            "texto": "Varanda"
           }
         ],
         "informacoes": [
@@ -216,19 +228,9 @@
             "mini": "img/quartos/triplo-musb82820q8.m.webp"
           },
           {
-            "src": "img/quartos/triplo-musb82jrrsh.webp",
-            "alt": "Luxo Triplo — foto 4",
-            "mini": "img/quartos/triplo-musb82jrrsh.m.webp"
-          },
-          {
             "src": "img/quartos/triplo-musb82p8dqa.webp",
             "alt": "Luxo Triplo — foto 5",
             "mini": "img/quartos/triplo-musb82p8dqa.m.webp"
-          },
-          {
-            "src": "img/quartos/triplo-musb82th7w4.webp",
-            "alt": "Luxo Triplo — foto 6",
-            "mini": "img/quartos/triplo-musb82th7w4.m.webp"
           }
         ]
       },
@@ -261,6 +263,18 @@
           {
             "icone": "cafe",
             "texto": "Café da manhã incluso"
+          },
+          {
+            "icone": "tv",
+            "texto": "Smart TV"
+          },
+          {
+            "icone": "check",
+            "texto": "Rede"
+          },
+          {
+            "icone": "check",
+            "texto": "Varanda"
           }
         ],
         "informacoes": [
@@ -273,11 +287,6 @@
             "mini": "img/quartos/quadruplo-musb8w74w38.m.webp"
           },
           {
-            "src": "img/quartos/quadruplo-musb8w11ojx.webp",
-            "alt": "Luxo Quádruplo — foto 1",
-            "mini": "img/quartos/quadruplo-musb8w11ojx.m.webp"
-          },
-          {
             "src": "img/quartos/quadruplo-musb8wcup69.webp",
             "alt": "Luxo Quádruplo — foto 3",
             "mini": "img/quartos/quadruplo-musb8wcup69.m.webp"
@@ -288,29 +297,9 @@
             "mini": "img/quartos/quadruplo-musb8wi65hu.m.webp"
           },
           {
-            "src": "img/quartos/quadruplo-musb8wopidp.webp",
-            "alt": "Luxo Quádruplo — foto 5",
-            "mini": "img/quartos/quadruplo-musb8wopidp.m.webp"
-          },
-          {
             "src": "img/quartos/quadruplo-musb8wue2py.webp",
             "alt": "Luxo Quádruplo — foto 6",
             "mini": "img/quartos/quadruplo-musb8wue2py.m.webp"
-          },
-          {
-            "src": "img/quartos/quadruplo-musb8x04qt4.webp",
-            "alt": "Luxo Quádruplo — foto 7",
-            "mini": "img/quartos/quadruplo-musb8x04qt4.m.webp"
-          },
-          {
-            "src": "img/quartos/quadruplo-musb8x5p1fl.webp",
-            "alt": "Luxo Quádruplo — foto 8",
-            "mini": "img/quartos/quadruplo-musb8x5p1fl.m.webp"
-          },
-          {
-            "src": "img/quartos/quadruplo-musb8x969kx.webp",
-            "alt": "Luxo Quádruplo — foto 9",
-            "mini": "img/quartos/quadruplo-musb8x969kx.m.webp"
           }
         ]
       },
@@ -343,6 +332,18 @@
           {
             "icone": "cafe",
             "texto": "Café da manhã incluso"
+          },
+          {
+            "icone": "tv",
+            "texto": "Smart TV"
+          },
+          {
+            "icone": "check",
+            "texto": "Rede"
+          },
+          {
+            "icone": "check",
+            "texto": "Varanda"
           }
         ],
         "informacoes": [
@@ -2037,7 +2038,7 @@
               ]
             }
           ],
-          "nota": "Surpreenda quem você ama com um momento que fica na memória. Peça a sua na recepção.",
+          "nota": "Surpreenda quem você ama com um momento que fica na memória.",
           "fotos": [
             {
               "src": "img/beneficios/decoracao-murj5lew20x.webp",
@@ -2099,7 +2100,7 @@
               ]
             }
           ],
-          "nota": "Solicite mais informações na recepção da pousada. Relaxe, aproveite e viva o melhor da Rede EcoVip!",
+          "nota": "Relaxe, aproveite e viva o melhor da Rede EcoVip!",
           "fotos": [
             {
               "src": "img/beneficios/monjolos-muri1n7ey9w.webp",
@@ -2127,11 +2128,6 @@
               "mini": "img/beneficios/monjolos-muri216v5ow.m.webp"
             },
             {
-              "src": "img/beneficios/monjolos-muri21hl60d.webp",
-              "alt": "Cachoeira Monjolos + almoço — foto 6",
-              "mini": "img/beneficios/monjolos-muri21hl60d.m.webp"
-            },
-            {
               "src": "img/beneficios/monjolos-muri21og55j.webp",
               "alt": "Cachoeira Monjolos + almoço — foto 7",
               "mini": "img/beneficios/monjolos-muri21og55j.m.webp"
@@ -2155,15 +2151,10 @@
               "src": "img/beneficios/monjolos-muri239vxnm.webp",
               "alt": "Cachoeira Monjolos + almoço — foto 11",
               "mini": "img/beneficios/monjolos-muri239vxnm.m.webp"
-            },
-            {
-              "src": "img/beneficios/monjolos-muri23gy677.webp",
-              "alt": "Cachoeira Monjolos + almoço — foto 12",
-              "mini": "img/beneficios/monjolos-muri23gy677.m.webp"
             }
           ]
         },
-        "preco": "Valor sob consulta na recepção"
+        "preco": "Valor sob consulta"
       },
       {
         "id": "passeios",
@@ -2213,7 +2204,7 @@
         "id": "massagem",
         "icone": "massagem",
         "titulo": "Massagem relaxante",
-        "texto": "Realizada por profissionais parceiros. Confira a disponibilidade na recepção.",
+        "texto": "Realizada por profissionais parceiros.",
         "botao": "Ver detalhes",
         "detalhes": {
           "destaque": "Sessão de 50 minutos",
@@ -2232,18 +2223,17 @@
               "titulo": "Agendamento",
               "itens": [
                 "Sinal de R$ 60,00 via Pix",
-                "Valor restante pago diretamente na recepção"
+                "Valor restante pago diretamente na pousada"
               ]
             }
           ],
-          "fotos": [],
-          "nota": "Agende na recepção da pousada."
+          "fotos": []
         },
         "preco": "A partir de R$ 190,00 por pessoa"
       }
     ],
     "fecho": "E ainda mais cuidado para tornar esses dias inesquecíveis.",
-    "aviso": "São serviços extras, pagos à parte, com condições especiais para hóspedes. Consulte valores e disponibilidade na recepção."
+    "aviso": "São serviços extras, pagos à parte, com condições especiais para hóspedes. Consulte valores e disponibilidade pelo WhatsApp."
   },
   "galeria": {
     "eyebrow": "Galeria",
