@@ -47,6 +47,7 @@
     "imagemMobile": "img/capa-mobile-musc8w8n8mg.webp"
   },
   "sobre": {
+    "botao": { "texto": "Fazer o tour virtual", "url": "https://snaptours.io/t/6afaf49f78ec5cabf63f7ba2", "icone": "camera" },
     "eyebrow": "Conheça a Meraki",
     "titulo": "Um tempo só de vocês.",
     "textos": [
